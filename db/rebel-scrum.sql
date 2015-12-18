@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2015 at 10:29 PM
+-- Generation Time: Dec 18, 2015 at 11:17 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `rebel-scrum`
 --
+CREATE DATABASE IF NOT EXISTS `rebel-scrum` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `rebel-scrum`;
 
 -- --------------------------------------------------------
 
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `auth`
 --
 
+DROP TABLE IF EXISTS `auth`;
 CREATE TABLE IF NOT EXISTS `auth` (
   `p_key` int(11) NOT NULL,
   `person_key` int(11) NOT NULL,
@@ -39,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `auth` (
 -- Table structure for table `occupant`
 --
 
+DROP TABLE IF EXISTS `occupant`;
 CREATE TABLE IF NOT EXISTS `occupant` (
   `p_key` int(11) NOT NULL,
   `person_key` int(11) NOT NULL,
@@ -52,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `occupant` (
 -- Table structure for table `person`
 --
 
+DROP TABLE IF EXISTS `person`;
 CREATE TABLE IF NOT EXISTS `person` (
   `p_key` int(11) NOT NULL,
   `lname` varchar(25) NOT NULL,
