@@ -1,3 +1,6 @@
+<?php 
+    session_start();   
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +18,12 @@
     </head>
 
     <body>
+        <form action="../lib/Registration.php" method="post" target="_top">
+        <?php 
+            if(isset($_SESSION['validation_errs'])) {
+                echo $_SESSION['validation_errs'];
+            }
+        ?>
         <h2>User Information</h2>
         <table style="margin-left: 20px;">
             <tr>
@@ -27,7 +36,11 @@
             </tr>
             <tr>
                 <td>Phone Number:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="u_phone1"></td>
+                <td>
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="u_phone_1">
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="u_phone_2">
+                    <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="u_phone_3">
+                </td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -94,7 +107,11 @@
             </tr>
             <tr>
                 <td>Phone Number:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="e1_phone"></td>
+                <td>
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e1_phone_1">
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e1_phone_2">
+                    <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="e1_phone_3">
+                </td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -151,7 +168,11 @@
             </tr>
             <tr>
                 <td>Phone Number:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="e2_phone"></td>
+                <td>
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e2_phone_1">
+                    <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e2_phone_2">
+                    <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="e2_phone_3">
+                </td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -195,6 +216,15 @@
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="e2_confirmemail"></td>
             </tr>
         </table>
-            
+
+        <br />
+        
+        
+            <table style="margin-left:auto;margin-right:auto;">
+                <tr>
+                    <td><button class="submit-button" type="submit">Register</button></td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
