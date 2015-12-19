@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div class = "map1" id="map"></div>
+    <div id="map" style="width:300px;height:300px;"></div>
   
     <script>
 // Note: This example requires that you consent to location sharing when
