@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <h1>Welcome, <i>ADD USER NAME HERE</i></h1>
+        <h1>Welcome, <?php echo $_SESSION["userID"] ?></h1>
         <form action="../plan.php" method="post" target="_top">
             <button class="submit-button" type="submit">Plan Trip</button>
         </form>
