@@ -1,5 +1,16 @@
 <?php 
-    session_start();   
+    session_start();
+    include('../lib/server-client.php');
+    
+    $sql = "CALL getPoints(?,?)";
+    $stmt = mysqli_prepare($con,$sql);
+    $a="TESTTRIP1";
+    $b="TRIP";
+    mysqli_stmt_bind_param($stmt,'ss',$a,$b);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($stmt);
+    serverDataToCookie($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +30,7 @@
 
     <body>
         <h1>Welcome, <?php echo $_SESSION["userID"] ?></h1>
-        <form action="../plan.php" method="post" target="_top">
+        <form action="plan.php" method="post" target="_top">
             <button class="submit-button-long" type="submit">Plan Trip</button>
         </form>
 

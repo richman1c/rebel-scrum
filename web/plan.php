@@ -1,3 +1,6 @@
+<?php
+    include('../lib/server-client.php');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,20 +18,33 @@
             
     <link rel="stylesheet" href="../css/csselements_mobile.css" />
 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <div id="dvMap" style="width:300px;height:300px;"></div>
   <script type="text/javascript">
-    var points = [];
+    var points = clientDataFromCookie(); //clientDataFromCookie();
+    console.log(points);
     
     window.onload = function () {
     var mapOptions = {
         center: new google.maps.LatLng(39.958120, -74.980072),
         zoom: 7,
         mapTypeId: google.maps.MapTypeId.ROADMAP
+        
+        
     };
+
     var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
- 
+         
+    points.forEach(function(point)
+    {
+       var latlon = new google.maps.LatLng(point.lat, point.lon);
+       var marker = new google.maps.Marker({
+        position: latlon,
+        map: map
+       });
+    });
     //Attach click event handler to the map.
     google.maps.event.addListener(map, 'click', function (e) {
  
@@ -59,7 +75,7 @@
 </script>
 
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASHj_0c7RUS7SYwxTBmKs5MpSF9ZO6MGw&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASHj_0c7RUS7SYwxTBmKs5MpSF9ZO6MGw&signed_in=true"
         async defer>
     </script>
     <br />

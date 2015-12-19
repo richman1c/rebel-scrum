@@ -1,5 +1,5 @@
 <?php
-    include('lib/dbconnect.php'); 
+    include('dbconnect.php'); 
     function serverDataToCookie($someData)
     {
         $array = array();
@@ -20,13 +20,13 @@
         {
         $jsonData = $_COOKIE["serverlistofpoints"];
         $array = json_decode($jsonData);
-        foreach($row in $array)
+        foreach($array as $row)
         {
             $sql = "CALL updateLocation(?,?,?,?,?)";
             $stmt = mysqli_prepare($con,$sql);
             mysqli_stmt_bind_param($stmt,'ddsss',$row['lat'],$row['lon'],$_SESSION['userID'],$row['loc_type'],$row['trip_name']);
             mysqli_stmt_execute($stmt);
-            mysqli_stmt_cluse($stmt);
+            mysqli_stmt_close($stmt);
         }
         unset($_COOKIE["serverlistofpoints"]);
         setcookie("serverlistofpoints", "", time()-3600);
@@ -62,11 +62,17 @@
     {
         //get value of cookie 'clientlistofpoints'
         //populate local data structure with decoded json data
-        
-        var array = jQuery.parseJSON(unescape(getCookie("clientlistofpoints")));        
+        var cookiedata = getCookie("clientlistofpoints");
+        console.log(cookiedata);
+        var array;
+        if(cookiedata)
+        {
+        array = jQuery.parseJSON(unescape(getCookie("clientlistofpoints")));        
         //delete cookie 'clientlistofpoints'
-        document.cookie = 'clientlistofpoints=; Max-Age=0'
+        //document.cookie = 'clientlistofpoints=;'
         //return local data structure for further processing
+        }
+        
         return array;
         
     }

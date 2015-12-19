@@ -86,11 +86,11 @@
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_pass"></td>
+                <td><input class="inputbox-mod" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_pass"></td>
             </tr>
             <tr>
                 <td>Confirm Password:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_confirmpass"></td>
+                <td><input class="inputbox-mod" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_confirmpass"></td>
             </tr>
         </table>
 
