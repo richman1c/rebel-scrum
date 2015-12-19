@@ -42,7 +42,6 @@
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="u_phone_2">
                     <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="u_phone_3">
                 </td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="u_phone1"></td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -114,7 +113,6 @@
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e1_phone_2">
                     <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="e1_phone_3">
                 </td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="e1_phone"></td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>
@@ -176,7 +174,6 @@
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e2_phone_2">
                     <input class="inputbox-mod-phone-long" type="text" placeholder="5555" name="e2_phone_3">
                 </td>
-                <td><input class="inputbox-mod" type="text" placeholder="555-555-5555" name="e2_phone"></td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>

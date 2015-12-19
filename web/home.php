@@ -20,19 +20,19 @@
     <body>
         <h1>Welcome, <?php echo $_SESSION["userID"] ?></h1>
         <form action="../plan.php" method="post" target="_top">
-            <button class="submit-button" type="submit">Plan Trip</button>
+            <button class="submit-button-long" type="submit">Plan Trip</button>
         </form>
 
         <form action="mytrip.php" method="post" target="_top">
-            <button class="submit-button" type="submit">My Trips</button>
+            <button class="submit-button-long" type="submit">My Trips</button>
         </form>
 
         <form action="trophies.php" method="post" target="_top">
-            <button class="submit-button" type="submit">Trophies</button>
+            <button class="submit-button-long" type="submit">Trophies</button>
         </form>
 
         <form action="starttrip.php" method="post" target="_top">
-            <button class="submit-button" type="submit">Start Trip</button>
+            <button class="submit-button-long" type="submit">Start Trip</button>
         </form>
     </body>
 </html>
