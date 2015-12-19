@@ -1,3 +1,6 @@
+<?php 
+    session_start();   
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +18,12 @@
     </head>
 
     <body>
+        <form action="../lib/Registration.php" method="post" target="_top">
+        <?php 
+            if(isset($_SESSION['validation_errs'])) {
+                echo $_SESSION['validation_errs'];
+            }
+        ?>
         <h2>User Information</h2>
         <table style="margin-left: 20px;">
             <tr>
@@ -210,7 +219,7 @@
 
         <br />
         
-        <form action="../lib/Registration.php" method="post" target="_top">
+        
             <table style="margin-left:auto;margin-right:auto;">
                 <tr>
                     <td><button class="submit-button" type="submit">Register</button></td>
