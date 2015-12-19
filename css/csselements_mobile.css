@@ -10,11 +10,7 @@
         /*background: url(images/colorado.jpg) no-repeat center center fixed; */
         background-attachment: fixed;
         background-position: center;
-<<<<<<< HEAD
         margin: 0 0 10px; /*3rd parameter must = #footer height*/
-=======
-        margin: 0 0 100px; /*3rd parameter must = #footer height*/
->>>>>>> ae7e13b... added registration form.
         background-size: cover;
     }
 
@@ -481,6 +477,52 @@
         position:relative;
         top:1px;
     }
+
+    .submit-button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+    background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');*/
+    background-color:#3d94f6;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    text-indent:0;
+    border:1px solid #337fed;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:40px;
+    line-height:40px;
+    width:100%;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #1570cd;
+        margin-bottom: 20px;
+    }
+    .submit-button:hover {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+        background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+        /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');*/
+        background-color:#1e62d0;
+    }.submit-button:active {
+        position:relative;
+        top:1px;
+    }
     
     .selectbox-mod{
         -webkit-appearance: menulist-button;
@@ -500,16 +542,11 @@
         background-clip: padding-box;
         /*border: 1px solid #cccccc;*/
     }
-<<<<<<< HEAD
     .inputbox-mod:focus, .inputbox-mod-phone-short:focus, .inputbox-mod-phone-long:focus{
-=======
-    .inputbox-mod:focus{
->>>>>>> ae7e13b... added registration form.
         outline: none;
         border-color: #5bb75b;
         box-shadow: 0 0 10px #5bb75b;
     }
-<<<<<<< HEAD
 
     .inputbox-mod-phone-short{
         padding-left: 5px;
@@ -538,8 +575,6 @@
         background-clip: padding-box;
         display: inline-block;
     }
-=======
->>>>>>> ae7e13b... added registration form.
     
     .textarea-mod{
         padding-left: 5px;
@@ -559,5 +594,8 @@
         border-color: #5bb75b;
         box-shadow: 0 0 10px #5bb75b;
     }
+    
+
+
 }
 
