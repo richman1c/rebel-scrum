@@ -3,7 +3,7 @@
 $server="localhost";	
 $user="root";
 $pass=NULL;
-$db="rebel-scrum"
+$db="rebel-scrum";
 
 // Create connection to server
 $con=mysqli_connect($server, $user, $pass, $db) ;
