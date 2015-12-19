@@ -10,7 +10,11 @@
         /*background: url(images/colorado.jpg) no-repeat center center fixed; */
         background-attachment: fixed;
         background-position: center;
+<<<<<<< HEAD
         margin: 0 0 10px; /*3rd parameter must = #footer height*/
+=======
+        margin: 0 0 100px; /*3rd parameter must = #footer height*/
+>>>>>>> ae7e13b... added registration form.
         background-size: cover;
     }
 
@@ -496,11 +500,16 @@
         background-clip: padding-box;
         /*border: 1px solid #cccccc;*/
     }
+<<<<<<< HEAD
     .inputbox-mod:focus, .inputbox-mod-phone-short:focus, .inputbox-mod-phone-long:focus{
+=======
+    .inputbox-mod:focus{
+>>>>>>> ae7e13b... added registration form.
         outline: none;
         border-color: #5bb75b;
         box-shadow: 0 0 10px #5bb75b;
     }
+<<<<<<< HEAD
 
     .inputbox-mod-phone-short{
         padding-left: 5px;
@@ -529,6 +538,8 @@
         background-clip: padding-box;
         display: inline-block;
     }
+=======
+>>>>>>> ae7e13b... added registration form.
     
     .textarea-mod{
         padding-left: 5px;
