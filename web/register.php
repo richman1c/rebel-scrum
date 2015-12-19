@@ -1,5 +1,5 @@
 <?php 
-    session_start();   
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +22,7 @@
         <?php 
             if(isset($_SESSION['validation_errs'])) {
                 echo $_SESSION['validation_errs'];
+                unset($_SESSION['validation_errs']);
             }
         ?>
         <h2>User Information</h2>
@@ -226,5 +227,6 @@
                 </tr>
             </table>
         </form>
+
     </body>
 </html>

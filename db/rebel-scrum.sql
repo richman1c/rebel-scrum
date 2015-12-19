@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2015 at 01:37 AM
+-- Generation Time: Dec 19, 2015 at 09:43 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -24,16 +24,16 @@ USE `rebel-scrum`;
 
 DELIMITER $$
 --
--- Functions
+-- Procedures
 --
-DROP FUNCTION IF EXISTS `addEmergencyContact`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `addEmergencyContact` (`firstname` VARCHAR(255), `lastname` VARCHAR(255), `phone` VARCHAR(255), `emailaddr` VARCHAR(255), `username` VARCHAR(255)) RETURNS INT(10) UNSIGNED NO SQL
+DROP PROCEDURE IF EXISTS `addEmergencyContact`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addEmergencyContact` (IN `firstname` VARCHAR(255), IN `lastname` VARCHAR(255), IN `phone` VARCHAR(255), IN `emailaddr` VARCHAR(255), IN `username` VARCHAR(255))  NO SQL
 BEGIN
  DECLARE e_contact_key INT(5);
  DECLARE user_key INT(5);
  DECLARE EXIT HANDLER FOR SQLEXCEPTION
  BEGIN
-  RETURN 1;
+ 
  END;
   INSERT INTO person(lname,fname,phone1,email)
   VALUES(lastname,firstname,phone,emailaddr);
@@ -41,23 +41,44 @@ BEGIN
   WHERE email = emailaddr;
  select person_key into user_key from auth where userID = username;
  INSERT INTO occupant(emerContact,person_key,primaryFlag)
-  VALUES(e_contact_key,user_key,"EMERGENCY");
- RETURN 0;
+  VALUES(e_contact_key,user_key,1);
 END$$
 
-DROP FUNCTION IF EXISTS `registerUser`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `registerUser` (`lastname` VARCHAR(255), `firstname` VARCHAR(255), `phone` VARCHAR(255), `emailaddr` VARCHAR(255), `dateofbirth` DATE, `uname` VARCHAR(255), `passwd` VARCHAR(255)) RETURNS INT(10) UNSIGNED NO SQL
+DROP PROCEDURE IF EXISTS `getPoints`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getPoints` (IN `tripname` VARCHAR(25), IN `type` ENUM('TRIP','TROPHY','BREADCRUMB'))  NO SQL
 BEGIN
  DECLARE user_key INT;
  DECLARE EXIT HANDLER FOR SQLEXCEPTION
  BEGIN
-  RETURN 1;
  END;
+ select lat,lon  from locations where trip_name=tripname OR loc_type = type;
+END$$
+
+DROP PROCEDURE IF EXISTS `registerUser`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `registerUser` (IN `lastname` VARCHAR(255), IN `firstname` VARCHAR(255), IN `phone` VARCHAR(255), IN `emailaddr` VARCHAR(255), IN `dateofbirth` DATE, IN `uname` VARCHAR(255), IN `passwd` VARCHAR(255))  NO SQL
+BEGIN
+ DECLARE user_key INT;
+ -- DECLARE EXIT HANDLER FOR SQLEXCEPTION
+ -- BEGIN
+ --  RETURN 1;
+ -- END;
  INSERT INTO person(lname,fname,phone1,email,dob)
   VALUES(lastname,firstname,phone,emailaddr,dateofbirth);
  select p_key into user_key from person where email=emailaddr;
  INSERT INTO auth(userID,pass,person_key) VALUES(uname,passwd,user_key);
- RETURN 0;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `updateLocation`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `updateLocation` (IN `latitude` FLOAT, IN `longitude` FLOAT, IN `username` VARCHAR(25), IN `type` ENUM('TRIP','TROPHY','BREADCRUMB'), IN `tripname` VARCHAR(25))  NO SQL
+BEGIN
+ DECLARE user_key INT;
+ DECLARE EXIT HANDLER FOR SQLEXCEPTION
+ BEGIN
+ END;
+ select person_key into user_key from auth where userID=username;
+ INSERT INTO locations(lat,lon,person_key,trip_name,loc_type)
+   VALUES(latitude,longitude,user_key,tripname,type);
 END$$
 
 DELIMITER ;
@@ -75,6 +96,22 @@ CREATE TABLE `auth` (
   `userID` varchar(25) NOT NULL,
   `pass` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE `locations` (
+  `lat` float NOT NULL,
+  `lon` float NOT NULL,
+  `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `person_key` int(11) NOT NULL,
+  `loc_type` enum('TRIP','TROPHY','BREADCRUMB') NOT NULL,
+  `trip_name` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='table of location pins for mapping';
 
 -- --------------------------------------------------------
 
