@@ -16,26 +16,32 @@
 
     <body>
         <h1>Welcome!</h1>
-        <table>
-            <tr>
-                <td>email:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="user"></td>
-            </tr>
-            <tr>
-                <td>password:</td>
-                <td><input class="inputbox-mod" type="text" placeholder="Password" name="password"></td>
-            </tr>
-            <tr>
-                <td><button class="submit-button" type="submit">Login</button></td>
-            </tr>
-        </table>
+        <form action="login.php" method="post" target="_top">
+            <table>
+                <tr>
+                    <td>Email:</td>
+                    <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input class="inputbox-mod" type="text" placeholder="Password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><button class="submit-button" type="submit">Login</button></td>
+                </tr>
+            </table>
+        </form>
+
         <br /> <br />
-        <table>
-            <tr>
-                <td>New User?</td>
-                <td><button class="register-button" type="submit">Register</button></td>
-            </tr>
-        </table>
+
+        <form action="web/register.php" method="post" target="_top">
+            <table>
+                <tr>
+                    <td>New User?</td>
+                    <td><button class="submit-button" type="submit">Register</button></td>
+                </tr>
+            </table>
+        </form>
             
     </body>
 </html>
