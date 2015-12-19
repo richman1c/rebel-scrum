@@ -10,7 +10,7 @@
         /*background: url(images/colorado.jpg) no-repeat center center fixed; */
         background-attachment: fixed;
         background-position: center;
-        margin: 0 0 100px; /*3rd parameter must = #footer height*/
+        margin: 0 0 10px; /*3rd parameter must = #footer height*/
         background-size: cover;
     }
 
@@ -496,10 +496,38 @@
         background-clip: padding-box;
         /*border: 1px solid #cccccc;*/
     }
-    .inputbox-mod:focus{
+    .inputbox-mod:focus, .inputbox-mod-phone-short:focus, .inputbox-mod-phone-long:focus{
         outline: none;
         border-color: #5bb75b;
         box-shadow: 0 0 10px #5bb75b;
+    }
+
+    .inputbox-mod-phone-short{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 45px;
+        font-size: small;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        display: inline-block;
+    }
+
+    .inputbox-mod-phone-long{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 70px;
+        font-size: small;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        display: inline-block;
     }
     
     .textarea-mod{
