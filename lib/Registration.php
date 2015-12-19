@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include("includes/dbconnect.php");
+include("includes/dbconnect.php");
 
 $u_firstName = $_POST['u_fname'];
 $u_lastName = $_POST['u_lname'];
@@ -57,41 +57,41 @@ $returnValue = FALSE;
 //USER VALIDATION
 // Verifies there is a valid email address in the 'Email' textbox
 if (!preg_match("/^\S+@[A-Za-z0-9_.-]+\.[A-Za-z]{2,6}$/", $u_email)) {
-    $message .= "User's Email Address format is incorrect.";
+    $message .= "-User's Email Address format is incorrect.";
     $returnValue = TRUE;
 }
 //Verifies the user wrote the correct email address.
 if(strcmp($u_email, $u_confirmemail) != 0){
-    $message .= "\nUser's Email and confirm email do not match.";
+    $message .= "<br />-User's Email and confirm email do not match.";
     $returnValue = TRUE;
 }
 //Verifies the user wrote the correct password.
 if(strcmp($u_pass, $u_confirmpass) != 0){
-    $message .= "\nUser's Password and confirm password do not match.";
+    $message .= "<br />-User's Password and confirm password do not match.";
     $returnValue = TRUE;
 }
 
 //EMERGENCY CONTACT 1 VALIDATION
 // Verifies there is a valid email address in the 'Email' textbox
 if (!preg_match("/^\S+@[A-Za-z0-9_.-]+\.[A-Za-z]{2,6}$/", $e1_email)) {
-    $message .= "\nPrimary emergency contact Email Address format is incorrect.";
+    $message .= "<br />-Primary emergency contact Email Address format is incorrect.";
     $returnValue = TRUE;
 }
 //Verifies the user wrote the correct email address.
 if(strcmp($e1_email, $e1_confirmemail) != 0){
-    $message .= "\nPrimary emergency contact Email and confirm email do not match.";
+    $message .= "<br />-Primary emergency contact Email and confirm email do not match.";
     $returnValue = TRUE;
 }
 
 //EMERGENCY CONTACT 2 VALIDATION
 // Verifies there is a valid email address in the 'Email' textbox
 if (!preg_match("/^\S+@[A-Za-z0-9_.-]+\.[A-Za-z]{2,6}$/", $e2_email)) {
-    $message .= "\nSecondary emergency contact Email Address format is incorrect.";
+    $message .= "<br />-Secondary emergency contact Email Address format is incorrect.";
     $returnValue = TRUE;
 }
 //Verifies the user wrote the correct email address.
 if(strcmp($e2_email, $e2_confirmemail) != 0){
-    $message .= "\nSecondary emergency contact Email and confirm email do not match.";
+    $message .= "<br />-Secondary emergency contact Email and confirm email do not match.";
     $returnValue = TRUE;
 }
 
