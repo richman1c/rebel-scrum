@@ -25,18 +25,18 @@
                 unset($_SESSION['validation_errs']);
             }
         ?>
-        <h2>User Information</h2>
-        <table style="margin-left: 20px;">
+        <h2 class="default-font header-font-size"><u>User Information</u></h2>
+        <table>
             <tr>
-                <td>First Name:</td>
+                <td class="inputlabel default-font text-font-size">First Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="First" name="u_fname"></td>
             </tr>
             <tr>
-                <td>Last Name:</td>
+                <td class="inputlabel default-font text-font-size">Last Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="Last" name="u_lname"></td>
             </tr>
             <tr>
-                <td>Phone Number:</td>
+                <td class="inputlabel default-font text-font-size">Phone Number:</td>
                 <td>
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="u_phone_1">
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="u_phone_2">
@@ -44,21 +44,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Date of Birth:</td>
+                <td class="inputlabel default-font text-font-size">Date of Birth:</td>
                 <td>
-                    <select class="selectbox-mod" name="u_month">
-                        <option value="january">January</option>
-                        <option value="february">February</option>
-                        <option value="march">March</option>
-                        <option value="april">April</option>
+                    <select class="selectbox-mod" name="e2_month">
+                        <option value="january">Jan</option>
+                        <option value="february">Feb</option>
+                        <option value="march">Mar</option>
+                        <option value="april">Apr</option>
                         <option value="may">May</option>
-                        <option value="june">June</option>
-                        <option value="july">July</option>
-                        <option value="august">August</option>
-                        <option value="september">September</option>
-                        <option value="october">October</option>
-                        <option value="november">November</option>
-                        <option value="december">December</option>
+                        <option value="june">Jun</option>
+                        <option value="july">Jul</option>
+                        <option value="august">Aug</option>
+                        <option value="september">Sep</option>
+                        <option value="october">Oct</option>
+                        <option value="november">Nov</option>
+                        <option value="december">Dec</option>
                     </select>
                     <select class="selectbox-mod" name="u_day">
                         <?php
@@ -77,37 +77,37 @@
                 </td>
             </tr>
             <tr>
-                <td>Email:</td>
+                <td class="inputlabel default-font text-font-size">Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="u_email"></td>
             </tr>
             <tr>
-                <td>Confirm Email:</td>
+                <td class="inputlabel default-font text-font-size">Confirm Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="u_confirmemail"></td>
             </tr>
             <tr>
-                <td>Password:</td>
+                <td class="inputlabel default-font text-font-size">Password:</td>
                 <td><input class="inputbox-mod" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_pass"></td>
             </tr>
             <tr>
-                <td>Confirm Password:</td>
+                <td class="inputlabel default-font text-font-size">Confirm Password:</td>
                 <td><input class="inputbox-mod" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" name="u_confirmpass"></td>
             </tr>
         </table>
 
-        <h2>Emergency Contacts</h2>
+        <h2 class="default-font header-font-size">Emergency Contacts</h2>
         
-        <h3>Primary</h3>
-        <table style="margin-left: 20px;">
+        <h3 class="default-font sub-header-font-size">Primary</h3>
+        <table>
             <tr>
-                <td>First Name:</td>
+                <td class="inputlabel default-font text-font-size">First Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="First" name="e1_fname"></td>
             </tr>
             <tr>
-                <td>Last Name:</td>
+                <td class="inputlabel default-font text-font-size">Last Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="Last" name="e1_lname"></td>
             </tr>
             <tr>
-                <td>Phone Number:</td>
+                <td class="inputlabel default-font text-font-size">Phone Number:</td>
                 <td>
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e1_phone_1">
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e1_phone_2">
@@ -115,21 +115,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Date of Birth:</td>
+                <td class="inputlabel default-font text-font-size">Date of Birth:</td>
                 <td>
-                    <select class="selectbox-mod" name="e1_month">
-                        <option value="january">January</option>
-                        <option value="february">February</option>
-                        <option value="march">March</option>
-                        <option value="april">April</option>
+                    <select class="selectbox-mod" name="e2_month">
+                        <option value="january">Jan</option>
+                        <option value="february">Feb</option>
+                        <option value="march">Mar</option>
+                        <option value="april">Apr</option>
                         <option value="may">May</option>
-                        <option value="june">June</option>
-                        <option value="july">July</option>
-                        <option value="august">August</option>
-                        <option value="september">September</option>
-                        <option value="october">October</option>
-                        <option value="november">November</option>
-                        <option value="december">December</option>
+                        <option value="june">Jun</option>
+                        <option value="july">Jul</option>
+                        <option value="august">Aug</option>
+                        <option value="september">Sep</option>
+                        <option value="october">Oct</option>
+                        <option value="november">Nov</option>
+                        <option value="december">Dec</option>
                     </select>
                     <select class="selectbox-mod" name="e1_day">
                         <?php
@@ -148,27 +148,27 @@
                 </td>
             </tr>
             <tr>
-                <td>Email:</td>
+                <td class="inputlabel default-font text-font-size">Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="e1_email"></td>
             </tr>
             <tr>
-                <td>Confirm Email:</td>
+                <td class="inputlabel default-font text-font-size">Confirm Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="e1_confirmemail"></td>
             </tr>
         </table>
 
-        <h3>Secondary</h3>
-        <table style="margin-left: 20px;">
+        <h3 class="default-font sub-header-font-size">Secondary</h3>
+        <table>
             <tr>
-                <td>First Name:</td>
+                <td class="inputlabel default-font text-font-size">First Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="First" name="e2_fname"></td>
             </tr>
             <tr>
-                <td>Last Name:</td>
+                <td class="inputlabel default-font text-font-size">Last Name:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="Last" name="e2_lname"></td>
             </tr>
             <tr>
-                <td>Phone Number:</td>
+                <td class="inputlabel default-font text-font-size">Phone Number:</td>
                 <td>
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e2_phone_1">
                     <input class="inputbox-mod-phone-short" type="text" placeholder="555" name="e2_phone_2">
@@ -176,21 +176,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Date of Birth:</td>
+                <td class="inputlabel default-font text-font-size">Date of Birth:</td>
                 <td>
                     <select class="selectbox-mod" name="e2_month">
-                        <option value="january">January</option>
-                        <option value="february">February</option>
-                        <option value="march">March</option>
-                        <option value="april">April</option>
+                        <option value="january">Jan</option>
+                        <option value="february">Feb</option>
+                        <option value="march">Mar</option>
+                        <option value="april">Apr</option>
                         <option value="may">May</option>
-                        <option value="june">June</option>
-                        <option value="july">July</option>
-                        <option value="august">August</option>
-                        <option value="september">September</option>
-                        <option value="october">October</option>
-                        <option value="november">November</option>
-                        <option value="december">December</option>
+                        <option value="june">Jun</option>
+                        <option value="july">Jul</option>
+                        <option value="august">Aug</option>
+                        <option value="september">Sep</option>
+                        <option value="october">Oct</option>
+                        <option value="november">Nov</option>
+                        <option value="december">Dec</option>
                     </select>
                     <select class="selectbox-mod" name="e2_day">
                         <?php
@@ -209,11 +209,11 @@
                 </td>
             </tr>
             <tr>
-                <td>Email:</td>
+                <td class="inputlabel default-font text-font-size">Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="e2_email"></td>
             </tr>
             <tr>
-                <td>Confirm Email:</td>
+                <td class="inputlabel default-font text-font-size">Confirm Email:</td>
                 <td><input class="inputbox-mod" type="text" placeholder="you@email.com" name="e2_confirmemail"></td>
             </tr>
         </table>
@@ -221,11 +221,8 @@
         <br />
         
         
-            <table style="margin-left:auto;margin-right:auto;">
-                <tr>
-                    <td><button class="submit-button" type="submit">Register</button></td>
-                </tr>
-            </table>
+
+                    <button class="submit-button-long" type="submit">Register</button>
         </form>
 
     </body>
