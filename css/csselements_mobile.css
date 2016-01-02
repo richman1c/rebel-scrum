@@ -6,11 +6,9 @@
     }
     
     body { 
-        /*background-image: url(images/Grey-website-background.png);*/
-        /*background: url(images/colorado.jpg) no-repeat center center fixed; */
         background-attachment: fixed;
         background-position: center;
-        margin: 0 0 10px; /*3rd parameter must = #footer height*/
+        margin: 10px 10px 10px; /*3rd parameter must = #footer height*/
         background-size: cover;
     }
 
@@ -22,6 +20,26 @@
     
     img {
         border: 0;
+    }
+
+    .default-font{
+        font-family:Arial;
+        font-weight:bold;
+        font-style:normal;
+    }
+
+    .text-font-size{
+        font-size:15px;
+    }
+
+    .sub-header-font-size{
+        font-size:20px;
+    }
+
+    .header-font-size{
+        font-size:30px;
+        margin-bottom: 5px;
+        text-decoration: underline;
     }
     
     .section-header{
@@ -41,78 +59,12 @@
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
-  
-    p.message{
-        width:auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-    td.name-input{
-        display:block;
-        width: auto;
-        padding-bottom: 15px;
-    }
-    
-    td.email-input{
-        display:block;
-        width: auto;
-    }
-    
-    td.force-col-specs, td.force-col-specs-widepic{
-        display:block;
-        width: auto;
-        padding-top: 10px;
-        text-align: center;
-    }
-    
-    span.whichComp{
-        display:block;
-        text-align: center;
-    }
-    
-    .build{
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: 10px;
-    }
-    .build-info{
-        margin: 10px;
-        padding: 0;
-    }
-    .build-pic{
-        text-align: center;
-    }
-    .build-pic-img-land{
-        height: 150px;
-        width: 230px;
-    }
-    .build-pic-img-port{
-        height:250px; 
-        width:200px;
-    }
-    
-    table.computers{
-        width:auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-    }
 
     table.inputs{
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
         text-align: left;
-    }
-    
-    table.comments{
-        width:100%;
-        padding-left: 5%;
-        padding-right: 5%;
-        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     dt {
@@ -292,10 +244,6 @@
         font-family: Verdana, Geneva, sans-serif;
     }
 
-    #builds, #projects, #contact{
-        display: none;
-    }
-
     #footer {
         color:#FFFAFA;
         position: absolute;
@@ -344,128 +292,50 @@
         padding-left: 10px;
         margin-bottom: 10px;
     }
-
-    .specs-txt{
-        text-align: left;
-    }
-    
-    /*Used in projects section*/
-    div.proj{
-        height: auto;
-    }
-    
-    div.projWrapper{
-        margin: 10px;
-        padding: 0;
-    }
-    
-    div.projImages{
-        text-align: center;
-    }
-    
-    .projImages-full-img-square{
-        height:200px;
-        width: 200px;
-    }
-    
-    .projImages-full-img-land{
-        height:125px;
-        width: 200px;
-    }
-    
-    .projImages-full-img-port{
-        height:200px;
-        width: 125px;
-    }
-    
-    .projImages-small-img-square, .projImages-small-img-port{
-        height: 20px;
-        width: 20px;
-    }
-    
-    .projImages-small-img-land{
-        height: 20px;
-        width: 40px;
-    }
-    
-    div.projImages-small{
-        text-align: center;
-        text-decoration: none;
-    }
     
     .no-decoration{
         text-decoration: none;
     }
     
-    #slide-code-cm,
-    #slide-code-genomic,
-    #slide-website-pine, #slide-code-pine,
-    #slide-code-ttt,
-    #slide-website-lol_player, #slide-code-lol_player,
-    #slide-code-pca,
-    #slide-code-bms,
-    #slide-code-lol_status {
-        cursor: pointer;
-        display: none;
-        font-size: 10px;
-        vertical-align: middle;
-        text-decoration: none;
-        color:#5bb75b;
-    }
-    
-    .proj-bullets {
-        font-size: 10px;
-        vertical-align: middle;
-    }
-    
-    .proj-link-block {
-        display: inline-block;
-    }
-    
-    .proj-link{
-        width: 16px;
-        height: 16px;
-    }
-    
     .li-filled{
         list-style-type: disc;
     }
-    
+
     /* This button was generated using CSSButtonGenerator.com */
     .submit-button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
-	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
-	/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');*/
-	background-color:#3d94f6;
-	-webkit-border-top-left-radius:6px;
-	-moz-border-radius-topleft:6px;
-	border-top-left-radius:6px;
-	-webkit-border-top-right-radius:6px;
-	-moz-border-radius-topright:6px;
-	border-top-right-radius:6px;
-	-webkit-border-bottom-right-radius:6px;
-	-moz-border-radius-bottomright:6px;
-	border-bottom-right-radius:6px;
-	-webkit-border-bottom-left-radius:6px;
-	-moz-border-radius-bottomleft:6px;
-	border-bottom-left-radius:6px;
-	text-indent:0;
-	border:1px solid #337fed;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
-	height:40px;
-	line-height:40px;
-	width:100px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #1570cd;
+    	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+    	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+    	/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');*/
+    	background-color:#3d94f6;
+    	-webkit-border-top-left-radius:6px;
+    	-moz-border-radius-topleft:6px;
+    	border-top-left-radius:6px;
+    	-webkit-border-top-right-radius:6px;
+    	-moz-border-radius-topright:6px;
+    	border-top-right-radius:6px;
+    	-webkit-border-bottom-right-radius:6px;
+    	-moz-border-radius-bottomright:6px;
+    	border-bottom-right-radius:6px;
+    	-webkit-border-bottom-left-radius:6px;
+    	-moz-border-radius-bottomleft:6px;
+    	border-bottom-left-radius:6px;
+    	text-indent:0;
+    	border:1px solid #337fed;
+    	display:inline-block;
+    	color:#ffffff;
+    	font-family:Arial;
+    	font-size:15px;
+    	font-weight:bold;
+    	font-style:normal;
+    	height:40px;
+    	line-height:40px;
+    	width:100px;
+    	text-decoration:none;
+    	text-align:center;
+    	text-shadow:1px 1px 0px #1570cd;
         margin-bottom: 20px;
     }
     .submit-button:hover {
@@ -479,40 +349,39 @@
     }
 
     .submit-button-long {
-    -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-    box-shadow:inset 0px 1px 0px 0px #97c4fe;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
-    background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
-    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');*/
-    background-color:#3d94f6;
-    -webkit-border-top-left-radius:6px;
-    -moz-border-radius-topleft:6px;
-    border-top-left-radius:6px;
-    -webkit-border-top-right-radius:6px;
-    -moz-border-radius-topright:6px;
-    border-top-right-radius:6px;
-    -webkit-border-bottom-right-radius:6px;
-    -moz-border-radius-bottomright:6px;
-    border-bottom-right-radius:6px;
-    -webkit-border-bottom-left-radius:6px;
-    -moz-border-radius-bottomleft:6px;
-    border-bottom-left-radius:6px;
-    text-indent:0;
-    border:1px solid #337fed;
-    display:inline-block;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    font-style:normal;
-    height:40px;
-    line-height:40px;
-    width:100%;
-    text-decoration:none;
-    text-align:center;
-    text-shadow:1px 1px 0px #1570cd;
-        margin-bottom: 20px;
+        -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+        box-shadow:inset 0px 1px 0px 0px #97c4fe;
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+        background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+        /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');*/
+        background-color:#3d94f6;
+        -webkit-border-top-left-radius:6px;
+        -moz-border-radius-topleft:6px;
+        border-top-left-radius:6px;
+        -webkit-border-top-right-radius:6px;
+        -moz-border-radius-topright:6px;
+        border-top-right-radius:6px;
+        -webkit-border-bottom-right-radius:6px;
+        -moz-border-radius-bottomright:6px;
+        border-bottom-right-radius:6px;
+        -webkit-border-bottom-left-radius:6px;
+        -moz-border-radius-bottomleft:6px;
+        border-bottom-left-radius:6px;
+        text-indent:0;
+        border:1px solid #337fed;
+        display:inline-block;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        font-style:normal;
+        width: 100%;
+        height:60px;
+        line-height:40px;
+        text-decoration:none;
+        text-align:center;
+        text-shadow:1px 1px 0px #1570cd;
     }
     .submit-button-long:hover {
         background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
@@ -529,9 +398,14 @@
         height: 30px;
     }
 
+    .inputlabel{
+        text-align: left;
+        vertical-align: middle;
+    }
+
     .inputbox-mod{
+        margin-top: 10px;
         padding-left: 5px;
-        padding-right: 5px;
         width: 100%;
         font-size: small;
         -moz-border-radius: 4px;
@@ -540,14 +414,7 @@
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        /*border: 1px solid #cccccc;*/
     }
-    .inputbox-mod:focus, .inputbox-mod-phone-short:focus, .inputbox-mod-phone-long:focus{
-        outline: none;
-        border-color: #5bb75b;
-        box-shadow: 0 0 10px #5bb75b;
-    }
-
     .inputbox-mod-phone-short{
         padding-left: 5px;
         padding-right: 5px;
@@ -561,7 +428,6 @@
         background-clip: padding-box;
         display: inline-block;
     }
-
     .inputbox-mod-phone-long{
         padding-left: 5px;
         padding-right: 5px;
@@ -574,6 +440,11 @@
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
         display: inline-block;
+    }
+    .inputbox-mod:focus, .inputbox-mod-phone-short:focus, .inputbox-mod-phone-long:focus{
+        outline: none;
+        border-color: #3d94f6;
+        box-shadow: 0 0 10px #3d94f6;
     }
     
     .textarea-mod{
@@ -594,8 +465,5 @@
         border-color: #5bb75b;
         box-shadow: 0 0 10px #5bb75b;
     }
-    
-
-
 }
 
